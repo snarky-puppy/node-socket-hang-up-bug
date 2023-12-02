@@ -24,6 +24,6 @@ describe('socket hang up', () => {
             timeout: 1000
         });
         await axe1.get('/1');
-        await axios.get(`/wait`, { baseURL});
+        await axios.get(`/wait`, { baseURL, timeout: 0 });
     }, 15000);
 });
