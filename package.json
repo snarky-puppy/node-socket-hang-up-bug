@@ -1,0 +1,13 @@
+{
+  "name": "socket-hang-up",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
