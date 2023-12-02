@@ -10,7 +10,7 @@ describe('socket hang up', () => {
             }
             res.end('ok');
         });
-        server.listen(0, done); // Listen on a random available port
+        server.listen(3000, done);
     });
 
     afterAll(done => {
@@ -18,7 +18,7 @@ describe('socket hang up', () => {
     });
 
     it('will fail with "socket hang up"', async () => {
-        const baseURL = `http://localhost:${server.address().port}`;
+        const baseURL = `http://localhost:3000`;
         const axe1 = axios.create({
             baseURL,
             timeout: 1000
