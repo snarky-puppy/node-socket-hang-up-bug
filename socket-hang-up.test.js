@@ -19,11 +19,7 @@ describe('socket hang up', () => {
 
     it('will fail with "socket hang up"', async () => {
         const baseURL = `http://localhost:3000`;
-        const axe1 = axios.create({
-            baseURL,
-            timeout: 1000
-        });
-        await axe1.get('/1');
-        await axios.get(`/wait`, { baseURL, timeout: 0 });
+        await axios.get('/1', {baseURL, timeout: 1000});
+        await axios.get(`/wait`, {baseURL, timeout: 0});
     }, 15000);
 });
